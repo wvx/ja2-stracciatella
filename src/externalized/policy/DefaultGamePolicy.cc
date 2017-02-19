@@ -39,6 +39,16 @@ DefaultGamePolicy::DefaultGamePolicy(rapidjson::Document *json)
   imp_load_saved_merc_by_nickname = (*json)["imp_load_saved_merc_by_nickname"].GetBool();
   imp_load_keep_inventory         = (*json)["imp_load_keep_inventory"].GetBool();
 
+  inventory_management_extras    = (*json)["inventory_management_extras"].GetBool();
+  ime_detach_ammo                = (*json)["ime_detach_ammo"].GetBool();
+  ime_detach_attachments         = (*json)["ime_detach_attachments"].GetBool();
+  ime_refill_canteens            = (*json)["ime_refill_canteens"].GetBool();
+  vehicle_inventory              = (*json)["vehicle_inventory"].GetBool();
+  tactical_hotkey_shift_n        = (*json)["tactical_hotkey_shift_j"].GetBool();
+
+  militia_use_sector_inventory          = (*json)["militia_use_sector_inventory"].GetBool();
+  enemy_defenders_use_sector_inventory  = (*json)["enemy_defenders_use_sector_inventory"].GetBool();
+
   enemy_weapon_minimal_status   = (*json)["enemy_weapon_minimal_status"].GetInt();
 
   ai_better_aiming_choice   = (*json)["ai"]["better_aiming_choice"].GetBool();
@@ -86,6 +96,7 @@ bool DefaultGamePolicy::isHotkeyEnabled(UIMode mode, HotkeyModifier modifier, ui
       switch(key)
       {
       case 'j':         return tactical_hotkey_shift_j;
+      case 'n':         return tactical_hotkey_shift_n;
       }
     }
     else if(modifier == HKMOD_ALT)

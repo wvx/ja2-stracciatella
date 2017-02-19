@@ -61,6 +61,15 @@ public:
   bool middle_mouse_look;               // Look cursor with middle mouse button
   bool can_enter_turnbased;             // 'd' can start turnbased if in real-time
 
+  bool inventory_management_extras;     // 1.13 inventory management hotkeys, shift-f, etc.
+  bool ime_detach_ammo;                 // hotkey detaches magazines from sector weapons
+  bool ime_detach_attachments;          // hotkey removes removable attachments from sector weapons
+  bool ime_refill_canteens;             // hotkey refill sector canteens, drinking does not deplete canteens out of combat
+  bool vehicle_inventory;               // Vehicles have accessable inventories
+
+  bool militia_use_sector_inventory;    // Militia are equiped from sector.inventory
+  bool enemy_defenders_use_sector_inventory; // Enemies add equipment from sector.inventory, even from lockers
+
   bool ai_better_aiming_choice;         // decide where to shoot depending on to-hit probability if random choice is being made
   bool ai_go_prone_more_often;          // especially when already facing the right direction
   int8_t threshold_cth_head;            // threshold AI always take head shots, increase game difficulty
