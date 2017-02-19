@@ -451,6 +451,7 @@ try
 		}
 
     // If time of death is a few days, now, don't add at all!
+		if (c->def.ubType != QUEEN_MONSTER_DEAD || !gamepolicy(perpetual_corpse_queen_crepitus))
 		if (GetWorldTotalMin() - c->def.uiTimeOfDeath > DELAY_UNTIL_DONE_ROTTING) return NULL;
 	}
 

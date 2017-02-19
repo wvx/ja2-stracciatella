@@ -73,6 +73,8 @@ public:
   bool militia_control;                 // 'q' hotkey to recruit militia/release/recruit best/nextbest
   int32_t militiamerc_salary;           // Daily salary of recruited milita merc
 
+  bool perpetual_corpse_queen_crepitus; // Queen crepitus' corpse souvenir
+
   bool ai_better_aiming_choice;         // decide where to shoot depending on to-hit probability if random choice is being made
   bool ai_go_prone_more_often;          // especially when already facing the right direction
   int8_t threshold_cth_head;            // threshold AI always take head shots, increase game difficulty
