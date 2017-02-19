@@ -58,6 +58,8 @@ DefaultGamePolicy::DefaultGamePolicy(rapidjson::Document *json)
 
   skip_sleep_explanation    = (*json)["skip_sleep_explanation"].GetBool();
 
+  extra_attachments         = (*json)["extra_attachments"].GetBool();
+
   enemy_weapon_minimal_status   = (*json)["enemy_weapon_minimal_status"].GetInt();
 
   ai_better_aiming_choice   = (*json)["ai"]["better_aiming_choice"].GetBool();
