@@ -56,6 +56,8 @@ DefaultGamePolicy::DefaultGamePolicy(rapidjson::Document *json)
 
   ironman_can_save_realtime = (*json)["ironman_can_save_realtime"].GetBool();
 
+  skip_sleep_explanation    = (*json)["skip_sleep_explanation"].GetBool();
+
   enemy_weapon_minimal_status   = (*json)["enemy_weapon_minimal_status"].GetInt();
 
   ai_better_aiming_choice   = (*json)["ai"]["better_aiming_choice"].GetBool();

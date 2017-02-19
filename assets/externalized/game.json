@@ -114,6 +114,8 @@
 
     "tactical_realtime_save_allowed": false,
 
+    "skip_sleep_explanation": false,
+
     //  Enables middle mouse button to trigger a look into cursor direction
     //  vanilla_setting: false
     "middle_mouse_look": true,
