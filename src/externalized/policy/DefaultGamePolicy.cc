@@ -54,6 +54,8 @@ DefaultGamePolicy::DefaultGamePolicy(rapidjson::Document *json)
 
   perpetual_corpse_queen_crepitus = (*json)["perpetual_corpse_queen_crepitus"].GetBool();
 
+  ironman_can_save_realtime = (*json)["ironman_can_save_realtime"].GetBool();
+
   enemy_weapon_minimal_status   = (*json)["enemy_weapon_minimal_status"].GetInt();
 
   ai_better_aiming_choice   = (*json)["ai"]["better_aiming_choice"].GetBool();
