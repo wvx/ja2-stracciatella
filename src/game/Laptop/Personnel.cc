@@ -41,6 +41,7 @@
 #include "GameInstance.h"
 #include "MagazineModel.h"
 #include "WeaponModels.h"
+#include "Soldier_Control.h"
 
 #define INVENTORY_BOX_X (399 + STD_SCREEN_X)
 #define INVENTORY_BOX_Y (205 + STD_SCREEN_Y)
@@ -785,6 +786,23 @@ static void DisplayCharStats(SOLDIERTYPE const& s)
 	 * do not overlap.  If it would, I move it over to the right. */
 	const INT32 iWidth = StringPixLength(pPersonnelScreenStrings[PRSNL_TXT_SKILLS], PERS_FONT);
 	const INT32 iMinimumX = iWidth + pers_stat_x + 2;
+
+	if(MercGetsAllTraits(&p))
+	{
+		swprintf(sString, lengthof(sString), L"%ls", gpStrategicString[17]);
+		FindFontRightCoordinates(pers_stat_x, 0, TEXT_BOX_WIDTH - 20, 0, sString, PERS_FONT, &sX, &sY);
+
+		//KM: April 16, 1999
+		//Perform the potential overrun check
+		if (sX <= iMinimumX)
+		{
+			FindFontRightCoordinates(pers_stat_x + TEXT_BOX_WIDTH - 20 + TEXT_DELTA_OFFSET, 0, 30, 0, sString, PERS_FONT, &sX, &sY);
+			sX = MAX(sX, iMinimumX);
+		}
+
+		MPrint(sX, STD_SCREEN_Y + pers_stat_y[19], sString);
+		return;
+	}
 
 	if (!fAmIaRobot)
 	{

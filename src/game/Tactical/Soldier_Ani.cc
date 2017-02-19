@@ -1023,7 +1023,7 @@ BOOLEAN AdjustToNextAnimationFrame( SOLDIERTYPE *pSoldier )
 						{
 							bool const fMartialArtist =
 								pSoldier->ubProfile != NO_PROFILE &&
-								HasSkillTrait(GetProfile(pSoldier->ubProfile), MARTIALARTS);
+								HAS_SKILL_TRAIT(pSoldier, MARTIALARTS);
 
 							UINT16 state;
 							if ( gAnimControl[ pSoldier->usAnimState ].ubHeight == ANIM_CROUCH )

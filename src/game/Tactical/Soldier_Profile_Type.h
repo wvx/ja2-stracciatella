@@ -339,12 +339,6 @@ struct MERCPROFILESTRUCT
 };
 
 
-static inline bool HasSkillTrait(MERCPROFILESTRUCT const& p, SkillTrait const skill)
-{
-	return p.bSkillTrait == skill || p.bSkillTrait2 == skill;
-}
-
-
 #define TIME_BETWEEN_HATED_COMPLAINTS 24
 
 #define SUSPICIOUS_DEATH				1

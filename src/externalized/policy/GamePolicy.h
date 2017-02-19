@@ -49,6 +49,12 @@ public:
 
   bool accurate_aim_circle;             // Aim circle size and colour corresponds to chance_to_hit, smaller is better.
 
+  bool all_skilltraits_mode;            // Allow soldier to get every perk available
+  bool all_skilltraits_just_ours;       // limit to player soldiers
+  int8_t all_skilltraits_wisdom;        // Wisdom required to qualify. Above 100 disables
+  int8_t all_skilltraits_level;         // Level required to qualify. Above 10 disables
+  bool enemy_elite_all_traits;          // Elites from queen's army get all perks
+
   bool middle_mouse_look;               // Look cursor with middle mouse button
   bool can_enter_turnbased;             // 'd' can start turnbased if in real-time
 

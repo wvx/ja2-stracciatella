@@ -83,6 +83,13 @@
     //  vanilla_setting: false
     "accurate_aim_circle": false,
 
+
+    "all_skilltraits_mode": false,
+    "all_skilltraits_just_ours": false,
+    "all_skilltraits_required_wisdom": 100,
+    "all_skilltraits_required_level": 10,
+    "enemy_elite_all_traits": false,
+
     //  Enables middle mouse button to trigger a look into cursor direction
     //  vanilla_setting: false
     "middle_mouse_look": true,

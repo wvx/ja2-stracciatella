@@ -14,6 +14,7 @@
 #include "ContentManager.h"
 #include "GameInstance.h"
 #include "slog/slog.h"
+#include "Soldier_Profile_Type.h" // support camouflaged enemy trait
 
 // Defines for Anim inst reading, taken from orig Jagged
 #define	ANIMFILENAME					BINARYDATADIR "/ja2bin.dat"
@@ -2517,7 +2518,7 @@ char const* GetBodyTypePaletteSubstitution(SOLDIERTYPE const* const s, UINT8 con
 					return "";
 				}
 
-				if (s->bCamo != 0) return ANIMSDIR "/camo.COL";
+				if (s->bCamo != 0 || HAS_SKILL_TRAIT(s, CAMOUFLAGED)) return ANIMSDIR "/camo.COL";
 			}
 			return 0;
 

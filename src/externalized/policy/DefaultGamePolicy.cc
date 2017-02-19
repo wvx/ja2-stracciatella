@@ -30,6 +30,12 @@ DefaultGamePolicy::DefaultGamePolicy(rapidjson::Document *json)
 
   accurate_aim_circle       = (*json)["accurate_aim_circle"].GetBool();
 
+  all_skilltraits_mode      = (*json)["all_skilltraits_mode"].GetBool();
+  all_skilltraits_just_ours = (*json)["all_skilltraits_just_ours"].GetBool();
+  all_skilltraits_wisdom    = (*json)["all_skilltraits_required_wisdom"].GetInt();
+  all_skilltraits_level     = (*json)["all_skilltraits_required_level"].GetInt();
+  enemy_elite_all_traits    = (*json)["enemy_elite_all_traits"].GetBool();
+
   enemy_weapon_minimal_status   = (*json)["enemy_weapon_minimal_status"].GetInt();
 
   ai_better_aiming_choice   = (*json)["ai"]["better_aiming_choice"].GetBool();
