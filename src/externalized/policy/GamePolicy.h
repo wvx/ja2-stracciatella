@@ -70,6 +70,9 @@ public:
   bool militia_use_sector_inventory;    // Militia are equiped from sector.inventory
   bool enemy_defenders_use_sector_inventory; // Enemies add equipment from sector.inventory, even from lockers
 
+  bool militia_control;                 // 'q' hotkey to recruit militia/release/recruit best/nextbest
+  int32_t militiamerc_salary;           // Daily salary of recruited milita merc
+
   bool ai_better_aiming_choice;         // decide where to shoot depending on to-hit probability if random choice is being made
   bool ai_go_prone_more_often;          // especially when already facing the right direction
   int8_t threshold_cth_head;            // threshold AI always take head shots, increase game difficulty

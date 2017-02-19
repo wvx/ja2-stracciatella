@@ -49,6 +49,9 @@ DefaultGamePolicy::DefaultGamePolicy(rapidjson::Document *json)
   militia_use_sector_inventory          = (*json)["militia_use_sector_inventory"].GetBool();
   enemy_defenders_use_sector_inventory  = (*json)["enemy_defenders_use_sector_inventory"].GetBool();
 
+  militia_control           = (*json)["take_control_of_militia"].GetBool();
+  militiamerc_salary        = (*json)["controlled_militia_salary"].GetInt();
+
   enemy_weapon_minimal_status   = (*json)["enemy_weapon_minimal_status"].GetInt();
 
   ai_better_aiming_choice   = (*json)["ai"]["better_aiming_choice"].GetBool();
