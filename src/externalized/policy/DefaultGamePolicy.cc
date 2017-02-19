@@ -28,6 +28,8 @@ DefaultGamePolicy::DefaultGamePolicy(rapidjson::Document *json)
 
   gui_extras            = (*json)["gui_extras"].GetBool();
 
+  accurate_aim_circle       = (*json)["accurate_aim_circle"].GetBool();
+
   enemy_weapon_minimal_status   = (*json)["enemy_weapon_minimal_status"].GetInt();
 
   ai_better_aiming_choice   = (*json)["ai"]["better_aiming_choice"].GetBool();

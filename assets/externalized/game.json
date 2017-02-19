@@ -79,6 +79,10 @@
     //  vanilla_setting: false
     "gui_extras": true,
 
+    //  Aim circle size decreases with better chance_to_hit
+    //  vanilla_setting: false
+    "accurate_aim_circle": false,
+
     //  Enables middle mouse button to trigger a look into cursor direction
     //  vanilla_setting: false
     "middle_mouse_look": true,

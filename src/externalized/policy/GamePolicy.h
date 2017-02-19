@@ -47,6 +47,8 @@ public:
 
   bool gui_extras;                      /* graphical user interface cosmetic mod */
 
+  bool accurate_aim_circle;             // Aim circle size and colour corresponds to chance_to_hit, smaller is better.
+
   bool middle_mouse_look;               // Look cursor with middle mouse button
   bool can_enter_turnbased;             // 'd' can start turnbased if in real-time
 
