@@ -55,6 +55,9 @@ public:
   int8_t all_skilltraits_level;         // Level required to qualify. Above 10 disables
   bool enemy_elite_all_traits;          // Elites from queen's army get all perks
 
+  bool imp_load_saved_merc_by_nickname; // IMP merc is saved and can be loaded at IMP creation if has same nickname
+  bool imp_load_keep_inventory;         // IMP merc gets inventory from last save game
+
   bool middle_mouse_look;               // Look cursor with middle mouse button
   bool can_enter_turnbased;             // 'd' can start turnbased if in real-time
 

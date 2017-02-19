@@ -36,6 +36,9 @@ DefaultGamePolicy::DefaultGamePolicy(rapidjson::Document *json)
   all_skilltraits_level     = (*json)["all_skilltraits_required_level"].GetInt();
   enemy_elite_all_traits    = (*json)["enemy_elite_all_traits"].GetBool();
 
+  imp_load_saved_merc_by_nickname = (*json)["imp_load_saved_merc_by_nickname"].GetBool();
+  imp_load_keep_inventory         = (*json)["imp_load_keep_inventory"].GetBool();
+
   enemy_weapon_minimal_status   = (*json)["enemy_weapon_minimal_status"].GetInt();
 
   ai_better_aiming_choice   = (*json)["ai"]["better_aiming_choice"].GetBool();

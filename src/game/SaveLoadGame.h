@@ -97,4 +97,10 @@ extern UINT32 guiJA2EncryptionSet;
 
 extern BOOLEAN gfUseConsecutiveQuickSaveSlots;
 
+const char *IMPSavedProfileCreateFilename(wchar_t *nickname);
+bool IMPSavedProfileDoesFileExist(wchar_t *nickname);
+SGPFile* const IMPSavedProfileOpenFileForRead(wchar_t *nickname);
+int IMPSavedProfileLoadMercProfile(wchar_t *nickname);
+void IMPSavedProfileLoadInventory(wchar_t *nickname, SOLDIERTYPE *pSoldier);
+
 #endif
